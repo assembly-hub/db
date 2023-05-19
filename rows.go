@@ -1,9 +1,7 @@
 package db
 
-import "database/sql"
-
 type Rows interface {
-	ColumnTypes() ([]*sql.ColumnType, error)
+	ColumnTypes() ([]ColumnType, error)
 	Columns() ([]string, error)
 	Err() error
 	Next() bool
